@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: repository.PokemonTypeRepositoryImplTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.357 s <<< FAILURE! - in repository.PokemonTypeRepositoryImplTest
+applicationContext_shouldLoadPokemonRepository  Time elapsed: 0.155 s  <<< ERROR!
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'pokemonTypeRepositoryImpl' available
+	at repository.PokemonTypeRepositoryImplTest.applicationContext_shouldLoadPokemonRepository(PokemonRepositoryImplTest.java:18)
+

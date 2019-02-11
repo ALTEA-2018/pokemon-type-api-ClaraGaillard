@@ -1,0 +1,9 @@
+bo/Sprites.class
+controller/PokemonTypeController.class
+service/PokemonTypeServiceImpl.class
+repository/PokemonTypeRepositoryImpl.class
+repository/PokemonTypeRepository.class
+run/Application.class
+service/PokemonTypeService.class
+bo/Stats.class
+bo/PokemonType.class

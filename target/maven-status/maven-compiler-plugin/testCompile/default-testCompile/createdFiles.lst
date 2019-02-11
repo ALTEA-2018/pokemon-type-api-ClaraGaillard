@@ -1,0 +1,4 @@
+repository/PokemonTypeRepositoryImplTest.class
+service/PokemonTypeServiceImplTest.class
+controller/PokemonTypeControllerIntegrationTest.class
+controller/PokemonTypeControllerTest.class

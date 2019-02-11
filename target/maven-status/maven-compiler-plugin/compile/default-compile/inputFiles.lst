@@ -1,0 +1,9 @@
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/run/Application.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/repository/PokemonTypeRepository.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/bo/PokemonType.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/service/PokemonTypeServiceImpl.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/bo/Stats.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/bo/Sprites.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/repository/PokemonTypeRepositoryImpl.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/controller/PokemonTypeController.java
+/home/m2miage/gaillardc/Documents/Trim2/ALTEA/TP3/pokemon-type-api-ClaraGaillard/pokemon-type-api-ClaraGaillard/src/main/java/service/PokemonTypeService.java
