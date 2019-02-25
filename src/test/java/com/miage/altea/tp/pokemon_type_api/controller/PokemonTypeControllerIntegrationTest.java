@@ -23,7 +23,7 @@ class PokemonTypeControllerIntegrationTest {
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private PokemonTypeControllerTest controller;
+    private PokemonTypeController controller;
 
     @Test
     void pokemonTypeController_shouldBeInstanciated(){

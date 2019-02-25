@@ -1,4 +1,5 @@
 repository/PokemonTypeRepositoryImplTest.class
-service/PokemonTypeServiceImplTest.class
-controller/PokemonTypeControllerIntegrationTest.class
-controller/PokemonTypeControllerTest.class
+com/miage/altea/tp/pokemon_type_api/controller/PokemonTypeControllerTest.class
+com/miage/altea/tp/pokemon_type_api/controller/PokemonTypeControllerIntegrationTest.class
+com/miage/altea/tp/pokemon_type_api/service/PokemonTypeServiceImplTest.class
+repository/TranslationRepositoryImplTest.class

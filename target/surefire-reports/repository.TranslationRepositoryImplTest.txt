@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: repository.TranslationRepositoryImplTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! - in repository.TranslationRepositoryImplTest
+getPokemonName_with1_inFrench_shouldReturnBulbizarre  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Bulbizarre> but was: <test>
+	at repository.TranslationRepositoryImplTest.getPokemonName_with1_inFrench_shouldReturnBulbizarre(TranslationRepositoryImplTest.java:19)
+
+getPokemonName_with1_inEnglish_shouldReturnBulbizarre  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Bulbasaur> but was: <test>
+	at repository.TranslationRepositoryImplTest.getPokemonName_with1_inEnglish_shouldReturnBulbizarre(TranslationRepositoryImplTest.java:25)
+
