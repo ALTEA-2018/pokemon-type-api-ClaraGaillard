@@ -4,6 +4,7 @@ import com.miage.altea.tp.pokemon_type_api.bo.PokemonType;
 import com.miage.altea.tp.pokemon_type_api.repository.PokemonTypeRepository;
 import com.miage.altea.tp.pokemon_type_api.repository.PokemonTypeRepositoryImpl;
 import com.miage.altea.tp.pokemon_type_api.repository.TranslationRepository;
+import com.miage.altea.tp.pokemon_type_api.repository.TranslationRepositoryImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -19,7 +20,7 @@ class PokemonTypeServiceImplTest {
 
     @Test
     void applicationContext_shouldLoadPokemonTypeService(){
-        var context = new AnnotationConfigApplicationContext(PokemonTypeServiceImpl.class, PokemonTypeRepositoryImpl.class);
+        var context = new AnnotationConfigApplicationContext(PokemonTypeServiceImpl.class, PokemonTypeRepositoryImpl.class, TranslationRepositoryImpl.class);
         var serviceByName = context.getBean("pokemonTypeServiceImpl");
         var serviceByClass = context.getBean(PokemonTypeService.class);
 
@@ -30,7 +31,7 @@ class PokemonTypeServiceImplTest {
 
     @Test
     void pokemonTypeRepository_shouldBeAutowired_withSpring(){
-        var context = new AnnotationConfigApplicationContext(PokemonTypeServiceImpl.class, PokemonTypeRepositoryImpl.class);
+        var context = new AnnotationConfigApplicationContext(PokemonTypeServiceImpl.class, PokemonTypeRepositoryImpl.class, TranslationRepositoryImpl.class);
         var service = context.getBean(PokemonTypeServiceImpl.class);
         assertNotNull(service.pokemonTypeRepository);
     }
@@ -41,10 +42,14 @@ class PokemonTypeServiceImplTest {
         var pokemonTypeService = new PokemonTypeServiceImpl(pokemonTypeRepository);
 
         var translationRepository = mock(TranslationRepository.class);
+        pokemonTypeService.setTranslationRepository(translationRepository);
+
+        when(translationRepository.getPokemonName(25, Locale.FRENCH)).thenReturn("Pikachu-FRENCH");
+        when(pokemonTypeRepository.findPokemonTypeById(25)).thenReturn(new PokemonType());
 
         pokemonTypeService.getPokemonType(25);
 
-        when(translationRepository.getPokemonName(25, Locale.FRENCH)).thenReturn("Pikachu-FRENCH");
+
         verify(pokemonTypeRepository).findPokemonTypeById(25);
 
     }

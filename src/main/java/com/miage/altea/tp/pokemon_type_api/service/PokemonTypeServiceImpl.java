@@ -5,6 +5,7 @@ import com.miage.altea.tp.pokemon_type_api.bo.Translation;
 import com.miage.altea.tp.pokemon_type_api.repository.PokemonTypeRepository;
 import com.miage.altea.tp.pokemon_type_api.repository.TranslationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,11 +15,11 @@ import java.util.Locale;
 @Service
 public class PokemonTypeServiceImpl implements PokemonTypeService{
 
-    PokemonTypeServiceImpl(){
-
-    }
+    PokemonTypeServiceImpl(){}
 
     public PokemonTypeRepository pokemonTypeRepository;
+
+    @Autowired
     public TranslationRepository translationRepository;
 
     @Autowired
@@ -26,13 +27,12 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
         pokemonTypeRepository = pockRepo;
     }
 
+
     @Override
     public PokemonType getPokemonType(int id) {
         PokemonType pokemonType= pokemonTypeRepository.findPokemonTypeById(id);
         String name = translationRepository.getPokemonName(id, Locale.FRENCH);
-        if (!name.equals(null)) {
-            pokemonType.setName(name);
-        }
+        pokemonType.setName(name);
         return pokemonType;
     }
 
