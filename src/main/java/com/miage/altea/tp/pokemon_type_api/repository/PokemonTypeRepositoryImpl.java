@@ -17,6 +17,7 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository {
     public PokemonTypeRepositoryImpl() {
         try {
             var pokemonsStream = new ClassPathResource("pokemons.json").getInputStream();
+
             var objectMapper = new ObjectMapper();
             var pokemonsArray = objectMapper.readValue(pokemonsStream, PokemonType[].class);
             this.pokemons = Arrays.asList(pokemonsArray);

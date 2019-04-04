@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -28,9 +27,7 @@ public class PokemonTypeController {
     }
     @GetMapping("/")
     public List<PokemonType> getAllPokemonTypes() {
-        List<PokemonType> listPT = pokemonTypeService.getAllPokemonTypes();
-        Collections.sort(listPT, (left, right) -> left.getId() - right.getId());
-        return listPT;
+        return pokemonTypeService.getAllPokemonTypes();
     }
 
     @GetMapping(value ="/", params="name")

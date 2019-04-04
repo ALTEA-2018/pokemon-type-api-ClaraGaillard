@@ -17,7 +17,6 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
 
     PokemonTypeServiceImpl(){}
 
-    @Autowired
     public PokemonTypeRepository pokemonTypeRepository;
 
     @Autowired
@@ -31,11 +30,9 @@ public class PokemonTypeServiceImpl implements PokemonTypeService{
 
     @Override
     public PokemonType getPokemonType(int id) {
-        if(LocaleContextHolder.getLocale() != Locale.ENGLISH && LocaleContextHolder.getLocale() != Locale.FRENCH) {
-            LocaleContextHolder.setLocale(Locale.ENGLISH);
-        }
         PokemonType pokemonType= pokemonTypeRepository.findPokemonTypeById(id);
-        pokemonType.setName(translationRepository.getPokemonName(id, LocaleContextHolder.getLocale()));
+        String name = translationRepository.getPokemonName(id, Locale.FRENCH);
+        pokemonType.setName(name);
         return pokemonType;
     }
 
