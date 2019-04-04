@@ -20,18 +20,14 @@ public class TranslationRepositoryImpl implements TranslationRepository {
     public TranslationRepositoryImpl() {
         try {
             var objectMapper = new ObjectMapper();
-
             var frenchTranslationStream = new ClassPathResource("translations-fr.json").getInputStream();
             var frenchTranslationsArray = objectMapper.readValue(frenchTranslationStream, Translation[].class);
-
             var englishTranslationStream = new ClassPathResource("translations-en.json").getInputStream();
             var englishTranslationsArray = objectMapper.readValue(englishTranslationStream, Translation[].class);
-
             this.translations = Map.of(
                     Locale.FRENCH, List.of(frenchTranslationsArray),
                     Locale.ENGLISH, List.of(englishTranslationsArray)
             );
-
             this.defaultTranslations = List.of(englishTranslationsArray);
         } catch (IOException e) {
             e.printStackTrace();
